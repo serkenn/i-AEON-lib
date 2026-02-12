@@ -1,0 +1,9 @@
+example.py
+.env
+/receipts
+/__pycache__
+**/__pycache__
+*.egg-info/
+dist/
+build/
+food_inventory.db
