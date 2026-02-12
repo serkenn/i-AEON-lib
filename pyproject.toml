@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "iaeon"
+version = "0.1.0"
+description = "iAEON authentication, digital receipt retrieval, and food inventory management toolkit"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "requests",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+image = ["Pillow"]
+
+[project.scripts]
+iaeon-login = "iaeon.cli.login:main"
+iaeon-inventory = "iaeon.cli.inventory_cmd:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/iaeon"]
